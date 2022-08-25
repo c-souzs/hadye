@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import React from 'react'
 
 import logo from '../assets/logo.svg';
-import Link from './Link';
-import MenuMobile from './MenuMobile';
+import Link from './elements/Link';
+import MenuMobile from './elements/MenuMobile';
 
 const Header = () => {
     const [showMenu, setShowMenu] = React.useState(false);
@@ -21,15 +21,15 @@ const Header = () => {
                     <ul className={`overflow-y-hidden text-base text-gray-100 text-center bg-[#0e0f11] absolute z-[999] left-0 right-0 top-[80px] p-6 transition-height ${classStylesListFiltered}
                     sm:flex sm:items-center sm:gap-x-8 sm:bg-transparent sm:visible sm:static sm:h-fit sm:p-0`}>
                         <li>
-                            <a href="" className='block font-medium px-8 py-3 transition-colors 
+                            <a href="/" className='block font-medium px-8 py-3 transition-colors 
                             sm:py-0 sm:text-gray-500 sm:hover:text-gray-100'>
-                                Documentation
+                                Pequeno empresário
                             </a>
                         </li>
                         <li>
                             <Link 
-                                href='/sign'
-                                text='Sign up'
+                                href='/'
+                                text='Começe agora'
                                 type='purple'
                                 mostStyles='w-full max-w-[280px] h-9 py-[5px] px-[23px] my-3 mx-auto'
                             />

@@ -13,7 +13,7 @@ const MenuMobile = ({active, setActive}: MenuMobileProps) => {
     return (
         <button 
             onClick={() => setActive(!active)} 
-            className={`w-6 block text-gray-500 border-t-2 border-current after:block after:w-full after:h-[2px] after:bg-current after:mt-[5px] after:relative after:transition-transform after:duration-300 before:duration-300 before:transition-transform before:block before:w-full before:h-[2px] before:bg-current before:mt-[5px] before:relative sm:hidden ${classStylesMenuMobileFiltered}`}
+            className={`w-6 relative z-[999] block text-gray-500 border-t-2 border-current after:block after:w-full after:h-[2px] after:bg-current after:mt-[5px] after:relative after:transition-transform after:duration-300 before:duration-300 before:transition-transform before:block before:w-full before:h-[2px] before:bg-current before:mt-[5px] before:relative sm:hidden ${classStylesMenuMobileFiltered}`}
         />
     )
 }

@@ -31,6 +31,7 @@ module.exports = {
         },
         'zinc': {
           200: '#25282C',
+          300: '#222529',
           400: '#1A1C1F',
           500: '#151719'
         },
@@ -51,11 +52,11 @@ module.exports = {
       gridTemplateColumns: {
         'sm-feature': 'minmax(350px, 450px)'
       },
-      variants: {
-        fill: ['hover', 'focus']
-      },
       backgroundImage: {
-        'decoration-header': 'url("/src/assets/illustration-section-01.svg")'
+        'decoration-header': 'url("/src/assets/decoration-header.svg")',
+        'decoration-workflows-right': 'url("/src/assets/decoration-workflow-right.svg")',
+        'decoration-workflows-left': 'url("/src/assets/decoration-workflow-left.svg")',
+        'decoration-contact': 'url("/src/assets/decoration-bg-contact.svg")'
       }
     },
   },

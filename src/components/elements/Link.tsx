@@ -11,7 +11,7 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 const Link = ({ text, href, type, mostStyles, ...rest}: LinkProps) => {
     const typeIsPurple = type === 'purple';
 
-    const classLinkFiltered = classNames({'bg-purple-500 hover:bg-purple-600': typeIsPurple}, {'bg-zinc-200 hover:bg-zinc-400': !typeIsPurple}, mostStyles);
+    const classLinkFiltered = classNames({'bg-purple-500 hover:bg-purple-600': typeIsPurple}, {'bg-zinc-200 hover:bg-zinc-300': !typeIsPurple}, mostStyles);
     
     return (
         <a 
