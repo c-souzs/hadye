@@ -9,7 +9,7 @@ import { ReactComponent as Instagram } from '../assets/instagram-icon.svg';
 
 const Footer = () => {
   return (
-    <footer className='bg-zinc-500 py-12'>
+    <footer className='bg-gray-200 dark:bg-zinc-500 py-12'>
         <div className='max-w-[1128px] h-full mx-auto px-4 sm:px-6'>
             <div className='flex flex-col items-center sm:flex-row sm:justify-between mb-4'>
                 <a href="/"><img src={logo} alt="Logo" /></a>
@@ -21,18 +21,18 @@ const Footer = () => {
                   </ul>
                 </nav>
             </div>
-            <div className='text-sm text-gray-500 flex flex-col items-center text-center sm:flex-row-reverse sm:justify-between sm:text-left'>
+            <div className='text-sm text-gray-400 dark:text-gray-500 flex flex-col items-center text-center sm:flex-row-reverse sm:justify-between sm:text-left'>
               <nav>
                 <ul className='flex justify-between gap-6'>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-gray-100'>Contato</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-gray-100'>Sobre</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-gray-100'>Dúvidas</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-gray-100'>Suporte</a></li>
+                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Contato</a></li>
+                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Sobre</a></li>
+                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Dúvidas</a></li>
+                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Suporte</a></li>
                 </ul>
               </nav>
               <div>
-                <span className='block mt-2 sm:mt-0'>Criado por <a href="https://github.com/cruip/open-react-template" target='blank_' className='text-gray-100 transition-colors hover:text-purple-600'>Cruip</a>. Todos os direitos reservados</span>
-                <span className='block mt-1'>Recriado por <a href="https://github.com/souzzs" target='blank_' className='text-gray-100 transition-colors hover:text-purple-600'>Souzzs</a>.</span>
+                <span className='block mt-2 sm:mt-0'>Criado por <a href="https://github.com/cruip/open-react-template" target='blank_' className='text-zinc-200 dark:text-gray-100 transition-colors hover:text-purple-600'>Cruip</a>. Todos os direitos reservados</span>
+                <span className='block mt-1'>Recriado por <a href="https://github.com/souzzs" target='blank_' className='text-zinc-200 dark:text-gray-100 transition-colors hover:text-purple-600'>Souzzs</a>.</span>
               </div>
             </div>
         </div>

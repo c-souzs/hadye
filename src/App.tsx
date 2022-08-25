@@ -10,7 +10,7 @@ const App = () => {
     return (
         <>
             <Header />
-            <main className="bg-zinc-500">
+            <main className="bg-gray-200 dark:bg-zinc-500">
                 <Introduction />
                 <BuildCompanyImage />
                 <Workflows />

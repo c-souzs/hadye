@@ -23,6 +23,7 @@ module.exports = {
       },
       colors: {
         'purple': {
+          100: '#7A7CCC',
           500: '#6163FF',
           600: '#5658DD'
         },
@@ -38,7 +39,7 @@ module.exports = {
         'gray': {
           100: '#ECEDED',
           200: '#EBEBEB',
-          300: '#E0E0E0',
+          300: '#CCCCCC',
           400: '#859099',
           500: '#9CA9B3',
         }
@@ -47,15 +48,17 @@ module.exports = {
         'height': 'height',
       },
       boxShadow: {
-        'image': '0 24px 64px rgb(21 23 25 / 64%)'
+        'card-testimonials-light': '0 0 8px 0 rgb(0 0 0 / 10%)'
       },
       gridTemplateColumns: {
         'sm-feature': 'minmax(350px, 450px)'
       },
       backgroundImage: {
         'decoration-header': 'url("/src/assets/decoration-header.svg")',
-        'decoration-workflows-right': 'url("/src/assets/decoration-workflow-right.svg")',
-        'decoration-workflows-left': 'url("/src/assets/decoration-workflow-left.svg")',
+        'decoration-workflows-right-dark': 'url("/src/assets/decoration-workflow-right-dark.svg")',
+        'decoration-workflows-left-dark': 'url("/src/assets/decoration-workflow-left-dark.svg")',
+        'decoration-workflows-right-light': 'url("/src/assets/decoration-workflow-right-light.svg")',
+        'decoration-workflows-left-light': 'url("/src/assets/decoration-workflow-left-light.svg")',
         'decoration-contact': 'url("/src/assets/decoration-bg-contact.svg")'
       }
     },

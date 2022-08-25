@@ -2,17 +2,19 @@ import classNames from 'classnames';
 import React from 'react'
 
 import logo from '../assets/logo.svg';
+import useTheme from '../hooks/useTheme';
 import Link from './elements/Link';
 import MenuMobile from './elements/MenuMobile';
 
 const Header = () => {
     const [showMenu, setShowMenu] = React.useState(false);
+    const { theme, toggleTheme } = useTheme();
     
     // Classes de estilo filtradas
     const classStylesListFiltered = classNames({'visible h-[155px]': showMenu}, {'invisible h-0': !showMenu}); 
 
     return (
-        <header className='bg-zinc-500 h-[80px] relative'>
+        <header className='bg-gray-200 dark:bg-zinc-500 h-[80px] relative'>
             <div className='absolute top-0 w-full max-w-full bg-no-repeat bg-auto h-[286px] bg-decoration-header bg-top '/>
             <div className='max-w-[1128px] h-full mx-auto px-4 flex justify-between items-center 
             sm:px-6'>
@@ -22,7 +24,7 @@ const Header = () => {
                     sm:flex sm:items-center sm:gap-x-8 sm:bg-transparent sm:visible sm:static sm:h-fit sm:p-0`}>
                         <li>
                             <a href="/" className='block font-medium px-8 py-3 transition-colors 
-                            sm:py-0 sm:text-gray-500 sm:hover:text-gray-100'>
+                            sm:py-0 sm:text-gray-500 dark:sm:hover:text-gray-100 sm:hover:text-zinc-200'>
                                 Pequeno empresário
                             </a>
                         </li>
@@ -33,6 +35,9 @@ const Header = () => {
                                 type='purple'
                                 mostStyles='w-full max-w-[280px] h-9 py-[5px] px-[23px] my-3 mx-auto'
                             />
+                        </li>
+                        <li>
+                            <button className='text-sm text-zinc-200 dark:text-gray-100' onClick={() => toggleTheme()}>{theme === 'dark' ? 'Dark 🌙' : 'Light ☀️'}</button>
                         </li>
                     </ul>
                     <MenuMobile active={showMenu} setActive={setShowMenu}/>
