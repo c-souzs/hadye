@@ -1,5 +1,9 @@
 import React from 'react'
 
+import Container from '../elements/Container';
+import Description from '../elements/Description';
+import Title from '../elements/Title';
+
 import quoteImage from '../../assets/quote.svg';
 
 const dataTestimonials = [
@@ -26,16 +30,20 @@ const dataTestimonials = [
 const Testimonials = () => {
   return (
     <section className='pt-12 sm:pt-20'>
-        <div className='max-w-[1128px] h-full mx-auto px-4 sm:px-6 before:w-full before:block before:h-[1px] before:bg-gray-300 dark:before:bg-zinc-200'>
+        <Container mostStyles='before:w-full before:block before:h-[1px] before:bg-gray-300 dark:before:bg-zinc-200'>
             <div className='w-full pt-12'>
-                <h1 className='text-zinc-200 dark:text-gray-100 text-3xl font-extrabold text-center mb-4 sm:text-4xl'>Relatos de nossos cliente 📝</h1>
-                <p className='text-gray-400 dark:text-gray-500 text-xl text-center max-w-[620px] mx-auto'>Estabelecer credibilidade é um dos fatores mais importantes nos dias de hoje.</p>
-                <div className='flex flex-wrap justify-center grid-cols-1 gap-y-6 gap-x-8 pt-12'>
+                <Title 
+                    text='Relatos de nossos cliente 📝'
+                />
+                <Description 
+                    text='Estabelecer credibilidade é um dos fatores mais importantes nos dias de hoje.'
+                />
+                <div className='flex flex-wrap justify-center grid-cols-1 gap-y-8 gap-x-8 pt-12'>
                     {
                         dataTestimonials.map(testimonial => {
                             const { id, descripiton, client, projectName } = testimonial;
                             return (
-                                <div key={id} className='dark:bg-zinc-200 shadow-card-testimonials-light dark:shadow-none px-6 py-8 min-w-[300px] max-w-[350px] w-full mx-auto rounded flex-1'>
+                                <div key={id} className='dark:bg-zinc-200 shadow-card-testimonials-light dark:shadow-none px-6 py-8 min-w-[300px] max-w-[450px] w-full mx-auto rounded flex-1'>
                                     <img src={quoteImage} alt="Quotation client" />
                                     <p className='text-lg text-gray-400 dark:text-gray-500 mt-4'>{descripiton}</p>
                                     <div className='text-base text-zinc-200 dark:text-gray-100 font-semibold pt-5 before:w-full before:block before:h-[1px] before:bg-[#CCCCCC] dark:before:bg-[#33363a] before:mb-4'>
@@ -49,7 +57,7 @@ const Testimonials = () => {
                     }
                 </div>
             </div>
-        </div>
+        </Container>
     </section>
   )
 }

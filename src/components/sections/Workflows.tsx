@@ -1,10 +1,14 @@
-import classNames from 'classnames';
 import React from 'react'
+
+import classNames from 'classnames';
+
+import Container from '../elements/Container';
+import Description from '../elements/Description';
+import Title from '../elements/Title';
 
 import worflowImage01 from '../../assets/features-split-image-01.png';
 import worflowImage02 from '../../assets/features-split-image-02.png';
 import worflowImage03 from '../../assets/features-split-image-03.png';
-import useTheme from '../../hooks/useTheme';
 
 const dataWorflows = [
     {
@@ -31,27 +35,33 @@ const dataWorflows = [
 ]
 
 const Workflows = () => {
-    const { theme } = useTheme();
-
   return (
     <section className='relative overflow-x-hidden'>
-        <div className='max-w-[1128px] h-full mx-auto px-4 sm:px-6 before:w-full before:block before:h-[1px] before:bg-gray-300 dark:before:bg-zinc-200'>
+        <Container mostStyles='before:w-full before:block before:h-[1px] before:bg-gray-300 dark:before:bg-zinc-200'>
             <div className='w-full pt-12 sm:pt-20'>
-                <h1 className='text-zinc-200 dark:text-gray-100 text-3xl font-extrabold text-center mb-4 sm:text-4xl'>Nosso fluxo de trabalho 💻</h1>
-                <p className='text-gray-400 dark:text-gray-500 text-xl text-center max-w-[620px] mx-auto'>Fluxo de trabalho também conhecido como workflow é o modo como os processos são realizados em uma empresa. Ele consiste em atividades realizadas em uma organização a partir de um padrão repetível e sequencial.</p>
-                <div className='mt-12'>
+                <Title 
+                    text='Nosso fluxo de trabalho 💻'
+                />
+                <Description 
+                    text='Fluxo de trabalho também conhecido como workflow é o modo como os processos são realizados em uma empresa. Ele consiste em atividades realizadas em uma organização a partir de um padrão repetível e sequencial.'
+                />
+                <div className='mt-6'>
                     {
                         dataWorflows.map((worflow, index) => {
                             const { id, subtitle, title, description, image } = worflow;
                             const positionItem = index % 2 === 0;
                             const lastElement = index === dataWorflows.length - 1;
-                            
+
+                            const classFilteredPositionRight = classNames({'before:right-0 before:translate-x-[275px] before:bg-decoration-workflows-right-light dark:before:bg-decoration-workflows-right-dark': positionItem});
+                            const classFilteredPositionLeft = classNames({'before:left-0 before:translate-x-[-275px] before:bg-decoration-workflows-left-light dark:before:bg-decoration-workflows-left-dark': !positionItem});
+                            const classFilteredAlignRow = classNames({'lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2': !positionItem});
+
                             return (
-                                <div key={id} className={classNames('text-center relative grid grid-cols-1 items-center gap-x-12 gap-y-8 py-8 lg:grid-cols-2 lg:text-left', {'pb-0': lastElement}, 'before:absolute before:hidden lg:before:block before:bottom-0 before:h-[255px] before:w-[385px] before:bg-no-repeat before:bg-center', {'before:right-0 before:translate-x-[275px] before:bg-decoration-workflows-right-light dark:before:bg-decoration-workflows-right-dark': positionItem}, {'before:left-0 before:translate-x-[-275px] before:bg-decoration-workflows-left-light dark:before:bg-decoration-workflows-left-dark': !positionItem})}>
+                                <div key={id} className={classNames('text-center relative grid grid-cols-1 items-center gap-x-12 gap-y-8 py-6 lg:grid-cols-2 lg:text-left before:absolute before:hidden lg:before:block before:bottom-0 before:h-[255px] before:w-[385px] before:bg-no-repeat before:bg-center',  {'pb-0': lastElement}, classFilteredAlignRow, classFilteredPositionLeft, classFilteredPositionRight)}>
                                     <div className={classNames({'lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2': !positionItem})}>
                                         <h4 className='text-sm text-purple-600 font-semibold uppercase mb-2'>{subtitle}</h4>
-                                        <h3 className='text-3xl text-zinc-200 dark:text-gray-100 font-bold mb-3'>{title}</h3>
-                                        <p className='text-xl text-gray-400 dark:text-gray-500'>{description}</p>
+                                        <h3 className='text-2xl sm:text-3xl text-zinc-200 dark:text-gray-100 font-bold mb-3'>{title}</h3>
+                                        <p className='text-lg text-gray-400 dark:text-gray-500'>{description}</p>
                                     </div>
                                     <img src={image} alt={title} className='block w-full max-h-[450px] h-full object-cover rounded relative z-40'/>
                                 </div>
@@ -60,7 +70,7 @@ const Workflows = () => {
                     }
                 </div>
             </div>
-        </div>
+        </Container>
     </section>
   )
 }
