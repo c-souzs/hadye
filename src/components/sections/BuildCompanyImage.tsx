@@ -10,6 +10,7 @@ import featureIcon03 from '../../assets/feature-tile-icon-03.svg';
 import featureIcon04 from '../../assets/feature-tile-icon-04.svg';
 import featureIcon05 from '../../assets/feature-tile-icon-05.svg';
 import featureIcon06 from '../../assets/feature-tile-icon-06.svg';
+import BuildCompanyImageCards from '../elements/BuildCompanyImageCards';
 
 const dataFeatures = [
     {
@@ -51,34 +52,23 @@ const dataFeatures = [
 ]
 
 const BuildCompanyImage = () => {
-  return (
-    <section className='py-12 sm:py-20'>
-        <Container>
-            <Title 
-                text='Engajamento & conversão 🔥'
-            />
-            <Description 
-                text='Quando engajados, os colaboradores, além de cumprirem suas funções com excelência, se sentem mais valorizados e conectados aos objetivos corporativos.'
-            />
-            <div className='pt-12 grid justify-center gap-8 grid-cols-sm-feature sm:grid-cols-2 sm:pt-20 sm:gap-16 lg:grid-cols-3'>
-                {
-                    dataFeatures.map(feature => {
-                        const { id, image, title, description } = feature;
-                        return (
-                            <div key={id} className='text-center'>
-                                <div className='w-16 h-16 bg-purple-600 rounded-circle mx-auto'>
-                                    <img src={image} alt={title} />
-                                </div>
-                                <h3 className='text-zinc-200 dark:text-gray-100 text-2xl font-bold mt-4 mb-2'>{title}</h3>
-                                <p className='text-gray-400 dark:text-gray-500 text-lg'>{description}</p>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </Container>
-    </section>
-  )
+    return (
+        <section className='py-12 sm:py-20'>
+            <Container>
+                <Title 
+                    text='Engajamento & conversão 🔥'
+                />
+                <Description 
+                    text='Quando engajados, os colaboradores, além de cumprirem suas funções com excelência, se sentem mais valorizados e conectados aos objetivos corporativos.'
+                />
+                <div className='pt-12 grid justify-center gap-8 grid-cols-sm-feature sm:grid-cols-2 sm:pt-20 sm:gap-16 lg:grid-cols-3'>
+                    {
+                        dataFeatures.map((feature, index) => <BuildCompanyImageCards key={feature.id} dataFeature={feature} indexFeature={index}/>)
+                    }
+                </div>
+            </Container>
+        </section>
+    )
 }
 
 export default BuildCompanyImage

@@ -15,7 +15,7 @@ const Header = () => {
     const classStylesListFiltered = classNames({'visible h-[185px]': showMenu}, {'invisible h-0': !showMenu}); 
 
     return (
-        <header className='bg-gray-200 dark:bg-zinc-500 h-[80px] relative'>
+        <header className={classNames('bg-gray-200 dark:bg-zinc-500 h-[80px] relative')}>
             <div className='absolute top-0 w-full max-w-full bg-no-repeat bg-auto h-[286px] bg-decoration-header bg-top '/>
             <div className='max-w-[1128px] h-full mx-auto px-4 flex justify-between items-center sm:px-6'>
                 <a href="/"><img src={logo} alt="Logo" /></a>

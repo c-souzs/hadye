@@ -46,6 +46,10 @@ module.exports = {
       },
       transitionProperty: {
         'height': 'height',
+        'opacity-transform': 'opacity, transform'
+      },
+      transitionTimingFunction: {
+        'element-up': 'cubic-bezier(0.39, 0.575, 0.565, 1)'
       },
       boxShadow: {
         'card-testimonials-light': '0 0 8px 0 rgb(0 0 0 / 10%)'
@@ -60,6 +64,25 @@ module.exports = {
         'decoration-workflows-right-light': 'url("/src/assets/decoration-workflow-right-light.svg")',
         'decoration-workflows-left-light': 'url("/src/assets/decoration-workflow-left-light.svg")',
         'decoration-contact': 'url("/src/assets/decoration-bg-contact.svg")'
+      },
+      keyframes: {
+        'show-up': {
+          '0%': {transform: 'translateY(20px)', opacity: '0'},
+          '100%': {transform: 'translateY(0)', opacity: '1'}
+        },
+        'show-left': {
+          '0%': {transform: 'translateX(-20px)', opacity: '0'},
+          '100%': {transform: 'translateX(0)', opacity: '1'}
+        },
+        'show-right': {
+          '0%': {transform: 'translateX(020px)', opacity: '0'},
+          '100%': {transform: 'translateX(0)', opacity: '1'}
+        }
+      },
+      animation: {
+        'show-up-element': 'show-up 2s forwards',
+        'show-left-element': 'show-left 2s forwards',
+        'show-right-element': 'show-right 2s forwards',
       }
     },
   },

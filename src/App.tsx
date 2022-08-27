@@ -5,8 +5,10 @@ import Header from "./components/Header"
 import Introduction from "./components/sections/Introduction"
 import Testimonials from "./components/sections/Testimonials"
 import Workflows from "./components/sections/Workflows"
+import React from "react"
 
 const App = () => {
+
     return (
         <>
             <Header />
