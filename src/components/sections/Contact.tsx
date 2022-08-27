@@ -4,8 +4,6 @@ import classNames from 'classnames';
 import useVisibleElement from '../../hooks/useVisibleElement';
 import useAnimateControl from '../../hooks/useAnimateControl';
 
-import Input from '../form/Input'
-
 import sendContact from '../../assets/send-contact.svg';
 
 const Contact = () => {
@@ -20,12 +18,10 @@ const Contact = () => {
                 <div className='dark:bg-purple-600 bg-purple-100 bg-decoration-contact bg-no-repeat bg-cover bg-right-bottom py-12 px-4 flex flex-col gap-x-12 gap-y-4 sm:px-6 md:flex-row md:items-center md:justify-between'>
                     <h1 className='text-2xl font-bold text-gray-100 sm:text-3xl text-center'>Entre em contato por e-mail para uma melhor conversa</h1>
                     <form className='w-full lg:max-w-[50%]'>
-                        <Input 
-                            placeholder='Your e-mail'
-                            type='email'
-                            icon={sendContact}
-                            required
-                        />
+                    <div className='relative flex items-center'>
+                        <input placeholder='Your e-mail' className={`block text-base text-zinc-500 px-[15px] py-[10px] max-w-full w-full rounded outline-none`}/>
+                        <img src={sendContact} alt='Icon decoration input' className='absolute right-[15px] cursor-pointer'/>
+                    </div>
                     </form>
                 </div>
             </div>
