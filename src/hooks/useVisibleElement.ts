@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { ElementHtml } from './useAnimateControl';
 
 type UseVisibleElementProps = {
@@ -10,7 +11,7 @@ const useVisibleElement = ({elementRef}: UseVisibleElementProps) => {
 
     const offSetTop = (elTop: number) => {
         const elTopFloor = Math.floor(elTop);
-        const windowInnerHeightHalf = window.innerHeight * .5;
+        const windowInnerHeightHalf = window.innerHeight * .7;
   
         return elTopFloor - windowInnerHeightHalf;
     }
@@ -24,13 +25,14 @@ const useVisibleElement = ({elementRef}: UseVisibleElementProps) => {
     
                 const visibleElement = offSetTop(elementBoundingTop) < 0; 
     
+                if(visibleElement){
+                    window.removeEventListener('scroll', checkElementVisible)
+                }
                 setVisible(visibleElement);
             }
             checkElementVisible();
             
             window.addEventListener("scroll", checkElementVisible);
-
-            return () => window.removeEventListener('scroll', checkElementVisible);
         }
     }, []);
 

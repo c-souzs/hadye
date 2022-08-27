@@ -1,7 +1,6 @@
 import React from 'react'
 
-import classNames from 'classnames';
-
+import WorkflowCard from '../elements/WorkflowCard';
 import Container from '../elements/Container';
 import Description from '../elements/Description';
 import Title from '../elements/Title';
@@ -9,7 +8,6 @@ import Title from '../elements/Title';
 import worflowImage01 from '../../assets/features-split-image-01.png';
 import worflowImage02 from '../../assets/features-split-image-02.png';
 import worflowImage03 from '../../assets/features-split-image-03.png';
-import WorkflowCard from '../elements/WorkflowCard';
 
 const dataWorflows = [
     {

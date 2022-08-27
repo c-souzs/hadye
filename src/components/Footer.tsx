@@ -7,6 +7,29 @@ import { ReactComponent as Facebook } from '../assets/facebook-icon.svg'
 import{ ReactComponent as Twitter } from '../assets/twitter-icon.svg';
 import { ReactComponent as Instagram } from '../assets/instagram-icon.svg';
 
+const dataLinks = [
+  {
+    id: 333,
+    href: '/',
+    name: 'Contato'
+  },
+  {
+    id: 334,
+    href: '/',
+    name: 'Sobre'
+  },
+  {
+    id: 335,
+    href: '/',
+    name: 'Dúvidas',
+  },
+  {
+    id: 336,
+    href: '/',
+    name: 'Suporte'
+  }
+]
+
 const Footer = () => {
   return (
     <footer className='bg-gray-200 dark:bg-zinc-500 py-12'>
@@ -24,10 +47,13 @@ const Footer = () => {
             <div className='text-sm text-gray-400 dark:text-gray-500 flex flex-col items-center text-center sm:flex-row-reverse sm:justify-between sm:text-left'>
               <nav>
                 <ul className='flex justify-between gap-6'>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Contato</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Sobre</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Dúvidas</a></li>
-                  <li><a href="/" className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>Suporte</a></li>
+                  {
+                    dataLinks.map(link => {
+                      return (
+                        <li key={link.id}><a href={link.href} className='text-inherit transition-colors hover:text-zinc-200 dark:hover:text-gray-100'>{link.name}</a></li>
+                      )
+                    })
+                  }
                 </ul>
               </nav>
               <div>

@@ -3,8 +3,6 @@ import React from 'react'
 import Container from '../elements/Container';
 import Description from '../elements/Description';
 import Title from '../elements/Title';
-
-import quoteImage from '../../assets/quote.svg';
 import TestimonialCard from '../elements/TestimonialCard';
 
 const dataTestimonials = [

@@ -1,9 +1,10 @@
 import React from 'react'
+
+import classNames from 'classnames';
 import useAnimateControl from '../../hooks/useAnimateControl';
 import useVisibleElement from '../../hooks/useVisibleElement';
 
 import quoteImage from '../../assets/quote.svg';
-import classNames from 'classnames';
 
 type TestimonialData = {
   client: string;

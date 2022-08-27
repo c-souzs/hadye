@@ -1,5 +1,6 @@
-import classNames from 'classnames';
 import React from 'react'
+
+import classNames from 'classnames';
 import useAnimateControl from '../../hooks/useAnimateControl';
 import useVisibleElement from '../../hooks/useVisibleElement';
 

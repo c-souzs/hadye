@@ -1,4 +1,5 @@
 import React from 'react'
+
 import usePersistedStateLs from './usePersistedStateLs';
 
 type Theme = 'dark' | 'light';

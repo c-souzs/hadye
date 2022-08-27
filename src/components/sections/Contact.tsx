@@ -1,11 +1,12 @@
 import React from 'react'
 
+import classNames from 'classnames';
+import useVisibleElement from '../../hooks/useVisibleElement';
+import useAnimateControl from '../../hooks/useAnimateControl';
+
 import Input from '../form/Input'
 
 import sendContact from '../../assets/send-contact.svg';
-import useVisibleElement from '../../hooks/useVisibleElement';
-import useAnimateControl from '../../hooks/useAnimateControl';
-import classNames from 'classnames';
 
 const Contact = () => {
     const refContact = React.useRef<null | HTMLHeadingElement>(null);

@@ -3,6 +3,7 @@ import React from 'react'
 import Container from '../elements/Container';
 import Description from '../elements/Description';
 import Title from '../elements/Title';
+import BuildCompanyImageCards from '../elements/BuildCompanyImageCards';
 
 import featureIcon01 from '../../assets/feature-tile-icon-01.svg';
 import featureIcon02 from '../../assets/feature-tile-icon-02.svg';
@@ -10,7 +11,6 @@ import featureIcon03 from '../../assets/feature-tile-icon-03.svg';
 import featureIcon04 from '../../assets/feature-tile-icon-04.svg';
 import featureIcon05 from '../../assets/feature-tile-icon-05.svg';
 import featureIcon06 from '../../assets/feature-tile-icon-06.svg';
-import BuildCompanyImageCards from '../elements/BuildCompanyImageCards';
 
 const dataFeatures = [
     {

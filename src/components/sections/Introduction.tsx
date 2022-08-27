@@ -1,12 +1,13 @@
 import React from 'react'
 
+import classNames from 'classnames';
+import useAnimateControl from '../../hooks/useAnimateControl';
+import useVisibleElement from '../../hooks/useVisibleElement';
+
 import Link from '../elements/Link'
 import Description from '../elements/Description';
 
 import companyEnvironment from '../../assets/company-environment.jpg';
-import classNames from 'classnames';
-import useAnimateControl from '../../hooks/useAnimateControl';
-import useVisibleElement from '../../hooks/useVisibleElement';
 
 const Introduction = () => {
     const refTitle = React.useRef<null | HTMLHeadingElement>(null);
